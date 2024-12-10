@@ -23,6 +23,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             email = parsed_data.get('email', [None])[0]
             product =parsed_data.get('product',[None])[0]
             message = parsed_data.get('message', [None])[0]
+            calification = parsed_data.get('calification',[None])[0]
             
 
             # Validar los datos
@@ -38,6 +39,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 "Nombre": name,
                 "Correo": email,
                 "Producto" : product,
+                "calificacion": calification,
                 "Mensaje": message,
                 "Fecha": datetime.utcnow()
             }
