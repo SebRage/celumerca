@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarphones - CeluMarca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles_index.css">
+    <link rel="shortcut icon" href="../img/celumerca_logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/celumerca_logo.png" alt="logo" width="100" height="80"><br>CeluMerca
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Carrito de compras -->
+                    <li class="nav-item dropdown me-3" style="cursor: pointer;">
+                        <a class="nav-link position-relative" href="/pages/cart.html">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </li>
+
+                    <!-- Usuario -->
+                    <div class="dropdown" style="cursor: pointer;">
+                        <img src="../img/perfil.png" alt="Usuario" width="30" class="rounded-circle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="">Configuración</a></li>
+                            <li><a class="dropdown-item" href="">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4">Smarphones Disponibles en CeluMerca</h1>
+        </div>
+    </header>
+
+    <!-- Featured Products -->
+    <section id="productos" class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/iphone_destacado.png" class="card-img-top" alt="Iphone 16 ">
+                        <div class="card-body">
+                            <h5 class="card-title">Iphone 16 Pro Max 256 Capacidad:1T</h5>
+                            <p class="card-text">El smartphone más avanzado con cámara de 48MP</p>
+                            <p class="card-text"><strong>Precio: $5.500.000</strong></p>
+                            <p class="card-text"><strong>Stock: 5</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Iphone 16 Pro Max', price: 5500000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/samsung_destacado.jpg" class="card-img-top" alt="Samsung S24 Ultra">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Galaxy S24 Ultra 5G</h5>
+                            <p class="card-text">Rendimiento excepcional y batería de larga duración</p>
+                            <p class="card-text"><strong>Precio: $4.800.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Samsung Galaxy S24 Ultra 5G', price: 4800000 })">Comprar
+                                ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/xiomi_destacado.jpg" class="card-img-top" alt="Xiaomi 14 Ultra 5G 16GB/512GB">
+                        <div class="card-body">
+                            <h5 class="card-title">Xiaomi 14 Ultra 5G 16GB/512GB</h5>
+                            <p class="card-text">Compacto, eficiente y respetuoso con el medio ambiente</p>
+                            <p class="card-text"><strong>Precio: $6.300.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Xiaomi 14 Ultra 5G 16GB/512GB', price: 6300000 })">Comprar
+                                ahora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/iphone12.jpg" class="card-img-top" alt="Iphone 12 Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Iphone 12 Pro</h5>
+                            <p class="card-text">Con tecnología 5G y pantalla Super Retina XDR</p>
+                            <p class="card-text"><strong>Precio: $3.200.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Iphone 12 Pro', price: 3200000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/samsung_note20.jpg" class="card-img-top" alt="Samsung Galaxy Note 20">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Galaxy Note 20 Ultra</h5>
+                            <p class="card-text">Pantalla Dynamic AMOLED 2X, cámara de 108MP</p>
+                            <p class="card-text"><strong>Precio: $4.200.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Samsung Galaxy Note 20 Ultra', price: 4200000 })">Comprar
+                                ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/google_pixel6.jpg" class="card-img-top" alt="Google Pixel 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Google Pixel 6</h5>
+                            <p class="card-text">Cámara Google Tensor, experiencia Android pura</p>
+                            <p class="card-text"><strong>Precio: $2.800.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Google Pixel 6', price: 2800000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/oneplus_9.jpg" class="card-img-top" alt="OnePlus 9">
+                        <div class="card-body">
+                            <h5 class="card-title">OnePlus 9 Pro</h5>
+                            <p class="card-text">Cámara Hasselblad, carga ultra rápida</p>
+                            <p class="card-text"><strong>Precio: $3.600.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'OnePlus 9 Pro', price: 3600000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/huawei_p40.jpg" class="card-img-top" alt="Huawei P40 Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Huawei P40 Pro</h5>
+                            <p class="card-text">Pantalla OLED de 90Hz, cámaras Leica</p>
+                            <p class="card-text"><strong>Precio: $4.000.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Huawei P40 Pro', price: 4000000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/oppo_findx3.jpg" class="card-img-top" alt="Oppo Find X3 Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Oppo Find X3 Pro</h5>
+                            <p class="card-text">Pantalla 120Hz AMOLED, cámaras de alta calidad</p>
+                            <p class="card-text"><strong>Precio: $3.800.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Oppo Find X3 Pro', price: 3800000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 10 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/realme_gt.jpg" class="card-img-top" alt="Realme GT 5G">
+                        <div class="card-body">
+                            <h5 class="card-title">Realme GT 5G</h5>
+                            <p class="card-text">Rendimiento de alto nivel con Snapdragon 870</p>
+                            <p class="card-text"><strong>Precio: $2.900.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Realme GT 5G', price: 2900000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 11 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/iphone13.jpg" class="card-img-top" alt="Iphone 13 Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Iphone 13 Pro</h5>
+                            <p class="card-text">Sistema de cámaras profesional y pantalla ProMotion</p>
+                            <p class="card-text"><strong>Precio: $4.800.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Iphone 13 Pro', price: 4800000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 12 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/sony_xperia.jpg" class="card-img-top" alt="Sony Xperia 1 II">
+                        <div class="card-body">
+                            <h5 class="card-title">Sony Xperia 1 II</h5>
+                            <p class="card-text">Pantalla 4K OLED, cámara profesional</p>
+                            <p class="card-text"><strong>Precio: $5.200.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Sony Xperia 1 II', price: 5200000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 13 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/lg_v60.jpg" class="card-img-top" alt="LG V60 ThinQ">
+                        <div class="card-body">
+                            <h5 class="card-title">LG V60 ThinQ</h5>
+                            <p class="card-text">Pantalla OLED y audio estéreo con sonido DTS:X</p>
+                            <p class="card-text"><strong>Precio: $2.500.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'LG V60 ThinQ', price: 2500000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 14 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/nokia_8.jpg" class="card-img-top" alt="Nokia 8.3 5G">
+                        <div class="card-body">
+                            <h5 class="card-title">Nokia 8.3 5G</h5>
+                            <p class="card-text">Pantalla PureDisplay, cuatro cámaras Zeiss</p>
+                            <p class="card-text"><strong>Precio: $3.000.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Nokia 8.3 5G', price: 3000000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 15 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/asus_zenfone.jpg" class="card-img-top" alt="Asus ZenFone 8">
+                        <div class="card-body">
+                            <h5 class="card-title">Asus ZenFone 8</h5>
+                            <p class="card-text">Rendimiento excepcional y diseño compacto</p>
+                            <p class="card-text"><strong>Precio: $3.400.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Asus ZenFone 8', price: 3400000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 16 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/vivo_x60.jpg" class="card-img-top" alt="Vivo X60 Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Vivo X60 Pro</h5>
+                            <p class="card-text">Pantalla AMOLED, cámaras ZEISS</p>
+                            <p class="card-text"><strong>Precio: $3.700.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Vivo X60 Pro', price: 3700000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 17 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/xiaomi_redmi.jpg" class="card-img-top" alt="Xiaomi Redmi Note 10">
+                        <div class="card-body">
+                            <h5 class="card-title">Xiaomi Redmi Note 10</h5>
+                            <p class="card-text">Pantalla AMOLED, batería de 48MP</p>
+                            <p class="card-text"><strong>Precio: $1.500.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Xiaomi Redmi Note 10', price: 1500000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 18 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/samsung_a72.jpg" class="card-img-top" alt="Samsung Galaxy A72">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Galaxy A72</h5>
+                            <p class="card-text">Pantalla Super AMOLED 90Hz, cámara de 64MP</p>
+                            <p class="card-text"><strong>Precio: $2.400.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Samsung Galaxy A72', price: 2400000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 19 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/honor_50.jpg" class="card-img-top" alt="Honor 50">
+                        <div class="card-body">
+                            <h5 class="card-title">Honor 50</h5>
+                            <p class="card-text">Pantalla OLED, carga rápida de 66W</p>
+                            <p class="card-text"><strong>Precio: $2.700.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Honor 50', price: 2700000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 20 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./img/motorola_edge.jpg" class="card-img-top" alt="Motorola Edge">
+                        <div class="card-body">
+                            <h5 class="card-title">Motorola Edge</h5>
+                            <p class="card-text">Pantalla OLED de 6.7", cámara de 108MP</p>
+                            <p class="card-text"><strong>Precio: $2.900.000</strong></p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="addToCart({ name: 'Motorola Edge', price: 2900000 })">Comprar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>CeluMerca</h5>
+                    <p>Tu tienda de confianza para celulares y accesorios de alta calidad.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Boletín</h5>
+                    <p>Suscríbete para recibir nuestras últimas ofertas</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Tu email" required>
+                            <button class="btn btn-primary" type="submit">Suscribir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="text-center">
+                <p>&copy; 2024 CeluMerca. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function addToCart(product) {
+            // Obtener el carrito actual o inicializar uno nuevo
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Buscar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === product.name);
+
+            if (existingProduct) {
+                // Incrementar la cantidad si el producto ya existe
+                existingProduct.quantity += 1;
+            } else {
+                // Agregar el nuevo producto al carrito
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Actualizar el contador del carrito
+            updateCartCount();
+
+            // Mensaje de confirmación
+            alert(`${product.name} fue añadido al carrito.`);
+        }
+
+        // Actualizar el contador del carrito
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-count').textContent = totalItems;
+        }
+
+        // Llama a la función al cargar la página
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
